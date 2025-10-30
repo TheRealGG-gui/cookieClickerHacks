@@ -1,0 +1,22 @@
+
+(function() {
+   
+    setInterval(function() {
+        document.getElementById('bigCookie').click();
+    }, 10);
+
+    // Auto-buy upgrades and products
+    setInterval(function() {
+        // Buy upgrades if affordable
+        for (let i = 0; i < Game.UpgradesInStore.length; i++) {
+            Game.UpgradesInStore[i].buy();
+        }
+      
+        for (let i = Game.ObjectsById.length - 1; i >= 0; i--) {
+            let obj = Game.ObjectsById[i];
+            if (obj.price <= Game.cookies) {
+                obj.buy();
+            }
+        }
+    }, 1000);
+})();
