@@ -1,0 +1,1 @@
+(function(){Game.cookies=1e+100;for(let i in Game.UpgradesById){let u=Game.UpgradesById[i];u.unlocked=1;u.bought=1;}for(let i in Game.AchievementsById){Game.AchievementsById[i].won=1;}for(let i in Game.ObjectsById){Game.ObjectsById[i].amount=1000;}Game.bakeryName='Fun Ruined!';Game.Notify('Fun Ruined!','You have everything now!',[16,5]);})();
